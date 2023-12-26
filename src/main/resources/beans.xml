@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="employee" class="com.example.tarento.Springboot_Dependency_Injection.Employee">
+        <constructor-arg name="name" value="John Doe"/>
+        <constructor-arg name="id" value="123"/>
+        <constructor-arg name="designation" value="Software Engineer"/>
+        <constructor-arg name="doj" value="01-07-2022"/>
+
+        <constructor-arg name="skills">
+            <list>
+                <value>Javascript</value>
+                <value>HTML</value>
+                <value>React JS</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="employee2" class="com.example.tarento.Springboot_Dependency_Injection.Employee">
+        <property name="name" value="William Henry"/>
+        <property name="id" value="456"/>
+        <property name="designation" value="Technical Architect"/>
+        <property name="doj" value="12-05-2008"/>
+
+        <property name="skills">
+            <list>
+                <value>Java</value>
+                <value>Springboot</value>
+                <value>Microservices</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>
